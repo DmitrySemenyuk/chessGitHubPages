@@ -1,12 +1,15 @@
 /**
  * Create and add nodes
  */
-let rows = [
-    TemplateCreator.createRow('A', 0),
-    TemplateCreator.createRow('A', 0),
-    TemplateCreator.createRow('A', 0),
-];
-$section = TemplateCreator.createCol('Win', rows);
+let winData = LocalStorageManager.getWinData();
+
+let winRows = [];
+for (let [label, val] of winData) {
+    winRows.push(
+        TemplateCreator.createRow(label, val)
+    );
+}
+
+$section = TemplateCreator.createCol('Win', winRows);
 
 HtmlManager.addToBody($section);
-

@@ -28,17 +28,13 @@ class TemplateCreator {
         let text = document.createTextNode(name);
         row.appendChild(text);
 
-        let btnMinus = document.createElement("button");
-        btnMinus.appendChild(document.createTextNode("-"));
-        row.appendChild(btnMinus);
+        row.appendChild(IncrementerBtn.getMinusBtn());
 
         let value = document.createElement("span");
         value.appendChild(document.createTextNode(val));
         row.appendChild(value);
 
-        let btnPlus = document.createElement("button");
-        btnPlus.appendChild(document.createTextNode("+"));
-        row.appendChild(btnPlus);
+        row.appendChild(IncrementerBtn.getPlusBtn());
 
         return row;
     }
