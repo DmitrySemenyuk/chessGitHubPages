@@ -1,7 +1,8 @@
 /**
  * Create and add nodes
  */
-let winData = LocalStorageManager.getWinData();
+let winDataLabel = 'Win';
+let winData = LocalStorageManager.getData(winDataLabel);
 
 let winRows = [];
 for (let [label, val] of winData) {
@@ -10,6 +11,6 @@ for (let [label, val] of winData) {
     );
 }
 
-$section = TemplateCreator.createCol('Win', winRows);
+$section = TemplateCreator.createCol(winDataLabel, winRows);
 
 HtmlManager.addToBody($section);

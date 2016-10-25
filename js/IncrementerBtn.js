@@ -5,7 +5,7 @@ class IncrementerBtn {
     }
 
     static minusIncrement(){
-        console.log('-');
+        IncrementerBtn.getNodeWithValue(this, 'minus');
     }
 
     static getPlusBtn(){
@@ -13,7 +13,21 @@ class IncrementerBtn {
     }
 
     static plusIncrement(){
-        console.log('+');
+        IncrementerBtn.getNodeWithValue(this, 'plus');
+    }
+
+    static getNodeWithValue(btn, operation){
+        let row = btn.parentNode;
+        let rowLabel = row.dataset.label;
+        let col = row.parentNode;
+        let colLabel = col.dataset.label;
+        let valueNode = row.childNodes[2];
+
+        let val = (operation == 'minus')
+            ? --valueNode.innerHTML
+            : ++valueNode.innerHTML;
+
+        LocalStorageManager.setData(colLabel, rowLabel, val);
     }
 
     static createBtn(label, func){

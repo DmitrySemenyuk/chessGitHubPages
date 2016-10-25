@@ -9,6 +9,8 @@ class TemplateCreator {
         let h2 = document.createElement('h2');
         let h2Text = document.createTextNode(name);
 
+        section.setAttribute("data-label", name);
+
         h2.appendChild(h2Text);
         section.appendChild(h2);
         for (let row of rows) {
@@ -25,6 +27,8 @@ class TemplateCreator {
      */
     static createRow(name, val) {
         let row = document.createElement("div");
+        row.setAttribute("data-label", name);
+
         let text = document.createTextNode(name);
         row.appendChild(text);
 
