@@ -1,0 +1,13 @@
+.game-result-col {
+    display: inline-block;
+    width: 250px;
+}
+.game-result-label {
+    display: inline-block;
+    width: 160px;
+}
+.game-result-value {
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+}

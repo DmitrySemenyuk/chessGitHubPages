@@ -1,5 +1,6 @@
 class HtmlManager {
-    static addToBody(node) {
-        document.body.appendChild(node);
+    static addToBody(createdNodes) {
+        let notesNode = document.getElementById('notes');
+        document.body.insertBefore(createdNodes, notesNode);
     }
 }

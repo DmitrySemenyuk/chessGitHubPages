@@ -1,16 +1,20 @@
 /**
  * Create and add nodes
  */
-let winDataLabel = 'Win';
-let winData = LocalStorageManager.getData(winDataLabel);
+let colsLabel = ['Loss', 'Win', 'Draw'];
 
-let winRows = [];
-for (let [label, val] of winData) {
-    winRows.push(
-        TemplateCreator.createRow(label, val)
-    );
+function creteCol(label) {
+    let records = LocalStorageManager.getData(label);
+
+    let rows = [];
+    for (let [label, val] of records) {
+        rows.push(
+            TemplateCreator.createRow(label, val)
+        );
+    }
+    return TemplateCreator.createCol(label, rows);
 }
 
-$section = TemplateCreator.createCol(winDataLabel, winRows);
-
-HtmlManager.addToBody($section);
+colsLabel.forEach(
+    (colLabel) => HtmlManager.addToBody(creteCol(colLabel))
+);
