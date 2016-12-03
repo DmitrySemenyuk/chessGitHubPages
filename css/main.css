@@ -1,6 +1,8 @@
 .game-result-col {
     display: inline-block;
     width: 250px;
+    padding: 0 0 0 10px;
+    border-right: 1px solid black;
 }
 .game-result-label {
     display: inline-block;
@@ -10,4 +12,13 @@
     display: inline-block;
     text-align: center;
     width: 20px;
+}
+
+.game-result-sum-value {
+    font-size: 110%;
+    font-weight: bold;
+    text-align: right;
+    padding: 5px 56px 0 0;
+    border-top: 1px solid black;
+    margin-top: 10px;
 }

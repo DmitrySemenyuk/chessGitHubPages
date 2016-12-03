@@ -1,8 +1,4 @@
 class LocalStorageManager {
-    /**
-     * @param colName
-     * @returns {*}
-     */
     static getRowsLabels(colName){
         let data = {
             Loss: ['inattention', 'weakness', 'time', 'opponent inattention'],
@@ -13,10 +9,6 @@ class LocalStorageManager {
         return data[colName];
     }
 
-    /**
-     * @param colName
-     * @returns {Map}
-     */
     static getData(colName){
         let rows = this.getRowsLabels(colName);
 
@@ -34,11 +26,6 @@ class LocalStorageManager {
         return result;
     }
 
-    /**
-     * @param colLabel
-     * @param rowLabel
-     * @param val
-     */
     static setData(colLabel, rowLabel, val){
         let storageJSON = localStorage.getItem(colLabel);
         let record = JSON.parse(storageJSON) || {};
