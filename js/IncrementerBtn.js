@@ -27,6 +27,8 @@ class IncrementerBtn {
             : ++valueNode.innerHTML;
 
         LocalStorageManager.setData(colLabel, rowLabel, val);
+
+        PieChart.draw(colLabel, LocalStorageManager.getData(colLabel));
     }
 
     static createBtn(label, func){

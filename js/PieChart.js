@@ -1,6 +1,5 @@
 class PieChart {
     static draw(label, data) {
-
         let sum = 0;
         let dataPoints = [];
         data.forEach(function (val, name) {
