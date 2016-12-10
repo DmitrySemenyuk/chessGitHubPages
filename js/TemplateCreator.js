@@ -1,10 +1,8 @@
 class TemplateCreator {
-    static createCol(name, rows, rowSum) {
+    static createCol(name, rows) {
         let section = document.createElement("section");
         let h2 = document.createElement('h2');
         let h2Text = document.createTextNode(name);
-        let rowsSumDiv = document.createElement('div');
-        let rowsSumDivText = document.createTextNode(rowSum);
 
         section.setAttribute("data-label", name);
         section.setAttribute("class", "game-result-col");
@@ -15,9 +13,7 @@ class TemplateCreator {
             section.appendChild(row);
         }
 
-        rowsSumDiv.appendChild(rowsSumDivText);
-        rowsSumDiv.setAttribute("class", "game-result-sum-value");
-        section.appendChild(rowsSumDiv);
+        section.appendChild(this._createPieChartContainer(name));
 
         return section;
     }
@@ -47,5 +43,14 @@ class TemplateCreator {
         node.setAttribute("class", "game-result-label");
 
         return node;
+    }
+
+    static _createPieChartContainer(name) {
+        let pieChartDiv = document.createElement('div');
+        pieChartDiv.id = 'pieChart' + name;
+        pieChartDiv.style.width = '100%';
+        pieChartDiv.style.height = '250px';
+
+        return pieChartDiv;
     }
 }

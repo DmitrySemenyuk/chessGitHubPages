@@ -1,12 +1,12 @@
 .game-result-col {
     display: inline-block;
-    width: 250px;
+    width: 350px;
     padding: 0 0 0 10px;
     border-right: 1px solid black;
 }
 .game-result-label {
     display: inline-block;
-    width: 160px;
+    width: 260px;
 }
 .game-result-value {
     display: inline-block;
