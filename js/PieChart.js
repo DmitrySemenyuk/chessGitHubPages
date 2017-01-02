@@ -1,10 +1,11 @@
 class PieChart {
     static draw(label, data) {
-        let sum = 0;
         let dataPoints = [];
+        let sum = this.reduce(data);
+
         data.forEach(function (val, name) {
-            dataPoints.push({y: val, name: name});
-            sum += val;
+            let percentVal = (val/sum).toFixed(2) * 100;
+            dataPoints.push({y: percentVal, name: name});
         });
 
         setTimeout(function(){
@@ -21,5 +22,15 @@ class PieChart {
             });
             chart.render();
         }, 100);
+    }
+
+    static reduce(data) {
+        let sum = 0;
+
+        data.forEach(function (val) {
+            sum += val;
+        });
+
+        return sum;
     }
 }
