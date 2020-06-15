@@ -2,15 +2,21 @@
   "news":[
     {
       "title": "news1",
-      "text": "text1"
+      "text": "text1",
+      "date": "2020-06-06",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/48px-Wikipedia-logo-v2.svg.png"
     },
     {
       "title": "news2",
-      "text": "text2"
+      "text": "text2",
+      "date": "2020-06-04",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/40px-Wikinews-logo.svg.png"
     },
     {
       "title": "news3",
-      "text": "text3"
+      "text": "text3",
+      "date": "2020-05-04",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/32px-Wiktionary-logo.svg.png"
     }
   ]
 }
